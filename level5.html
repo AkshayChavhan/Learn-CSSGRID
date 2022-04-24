@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level5-GridMyLife</title>
+    <style>
+         *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: blue;
+            display:grid;
+            grid-template-columns: repeat(12 , 1fr);
+            grid-template-rows: repeat(12 , 1fr);
+
+        }
+
+
+        .container > div{
+            background-color: aqua;
+            border:2px red solid;
+        }
+
+        .box-A{
+            grid-area:1/1/3/13;
+        }
+        .box-b{
+            grid-area:3/3/5/10;
+        }
+        .box-c{
+            grid-area: 3/1/11/3;
+        }
+        .box-d{
+            grid-area: 5/3/11/10;
+        }
+        .box-e{
+            grid-area:3/10/11/13;
+        }
+        .box-f{
+            grid-area: 11/1/13/13;
+        }
+
+
+        @media only screen and (max-width:866px){
+            .container>div{
+                background-color: red;
+                border: white 2px solid;
+            }
+            .box-b{
+                grid-area:3/1/5/13;
+            }
+            .box-c{
+                grid-area:5/1/11/3;
+            }
+            .box-d{
+                grid-area:5/3/11/13;
+            }
+            .box-e{
+                grid-area: 11/1/13/3;
+            }
+            .box-f{
+             grid-area: 11/3/13/13;   
+            }
+
+        }
+
+        @media only screen and (max-width:500px){
+            .container > div{
+                background-color:pink;
+            }
+            
+            .box-A1{
+                grid-area:1/1/3/13;
+            }
+            .box-b{
+                grid-area: 3/1/5/13;
+            }
+            .box-d{
+                grid-area: 5/1/9/13;
+            }
+            .box-c{
+                grid-area: 9/1/11/13;
+            }
+            .box-f{
+                grid-area: 11/1/13/7;
+            }
+            .box-e{
+                grid-area: 11/7/13/13;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-A">Box-a</div>
+        <div class="box-b">Box-b</div>
+        <div class="box-c">Box-c</div>
+        <div class="box-d">Box-d</div>
+        <div class="box-e">Box-e</div>
+        <div class="box-f">Box-f</div>
+    </div>
+    
+</body>
+</html>
