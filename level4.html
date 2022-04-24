@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level4 -GridMyLife</title>
+    <style>
+         *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: blue;
+            display:grid;
+            grid-template-rows : repeat(12,1fr);
+            grid-template-columns: repeat(12 ,1fr);
+
+        }
+
+        .container > div{
+            background-color: aqua;
+        }
+
+        .box-A{
+            grid-area: 1/1/5/13;
+        }
+        .box-b{
+            grid-area: 5/1/9/9;
+        }
+        .box-c{
+            grid-area: 9/1/13/5;
+        }
+        .box-d{
+            grid-area: 9/5/13/9; 
+        }
+        .box-e{
+            grid-area:5/9/13/13;
+        }
+
+        @media only screen and (max-width:500px){
+            .container > div{
+                background-color:red;
+            }
+
+            .box-A{
+                grid-area: 1/1/4/13;
+            }
+            .box-b{
+                grid-area: 4/1/7/13;
+            }
+            .box-c{
+                grid-area:7/1/10/7;
+            }
+            .box-d{
+                grid-area:7/7/10/13;
+            }
+            .box-e{
+                grid-area:10/1/13/13;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-A">Box A </div>
+        <div class="box-b">Box b </div>
+        <div class="box-c">Box c </div>
+        <div class="box-d">Box d </div>
+        <div class="box-e">Box e </div>
+    </div>
+    
+</body>
+</html>
